@@ -6,7 +6,6 @@ package training.ideas.java.withStrings;
 public class StringDeCompression {
     public String decompressGivenString(String myInputString) {
         String myOutputString = "";
-        int i=2;
         for(int i=0;i<myInputString.length();i=i+2){
            int pos=i+1;
            int myCounter = Character.getNumericValue(myInputString.charAt(pos));
