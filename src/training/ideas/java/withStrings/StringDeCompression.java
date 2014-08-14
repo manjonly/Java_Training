@@ -6,11 +6,28 @@ package training.ideas.java.withStrings;
 public class StringDeCompression {
     public String decompressGivenString(String myInputString) {
         String myOutputString = "";
-        for(int i=0;i<myInputString.length();i=i+2){
-           int pos=i+1;
-           int myCounter = Character.getNumericValue(myInputString.charAt(pos));
-           char myChar = myInputString.charAt(i);
-           for (int j=0;j<myCounter;j++) myOutputString=myOutputString+myChar;
+        char myChar = myInputString.charAt(0);
+        int myCounter=0;
+        char myNextChar ;
+        int i=1;
+        for(;i<=myInputString.length();i++){
+           if (i==myInputString.length()){
+               myNextChar=myInputString.charAt(0);
+           } else {
+               myNextChar = myInputString.charAt(i);
+           }
+            if (Character.isDigit(myNextChar)){
+               if (myCounter>0) {
+                   String myTempString =Integer.toString(myCounter) + Integer.toString(Character.getNumericValue(myNextChar));
+                   myCounter = Integer.parseInt(myTempString);
+               }else {myCounter = Character.getNumericValue(myNextChar);
+               }
+           }else{
+               //int pos = i + 1;
+               for (int j=0;j<myCounter;j++) myOutputString = myOutputString + myChar;
+               myCounter=0;
+               myChar=myNextChar;
+           }
         }
         return myOutputString;
     }
