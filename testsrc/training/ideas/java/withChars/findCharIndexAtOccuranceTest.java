@@ -61,4 +61,44 @@ public class findCharIndexAtOccuranceTest {
 
         Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'A',7));
     }
+
+    @Test
+    public void findCharAtOccuranceTest6(){
+        findChar myFindCharClass=new findChar();
+        char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
+        char [] findArray ={'J','K','R','I'};
+        int expectedOutputIndex = -1;
+
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray,findArray,0));
+    }
+
+    @Test
+    public void findCharAtOccuranceTest7(){
+        findChar myFindCharClass=new findChar();
+        char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
+        char [] findArray ={'J','A','R','I'};
+        int expectedOutputIndex = 3;
+
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray,findArray,0));
+    }
+
+    @Test
+    public void findCharAtOccuranceTest8(){
+        findChar myFindCharClass=new findChar();
+        char [] myInputCharArray = {'M','A','R','J','A','R','I','N','I','K','I','T','A'};
+        char [] findArray ={'A','R'};
+        int expectedOutputIndex = 4;
+
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray,findArray,3));
+    }
+
+    @Test
+    public void findCharAtOccuranceTest9(){
+        findChar myFindCharClass=new findChar();
+        char [] myInputCharArray = {'M','A','K','J','A','R','I','N','I','K','I','T','A'};
+        char [] findArray ={'A','R'};
+        int expectedOutputIndex = 4;
+
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray,findArray,0));
+    }
 }

@@ -17,4 +17,26 @@ public class findCharIndexAtOccurance {
         if (flagFound==false) i=-1;
         return i;
     }
+
+    public int myIndexOF(char[] inputCharArray, char [] userFindCharArray, int atIndex) {
+        boolean foundfirstoccurance=false;
+        boolean endofCharArray=false;
+        int i=-1;
+        int returnindex=-1;
+        int userFindArrayCounter=0;
+        for (i=0; i<inputCharArray.length;i++){
+            if (userFindArrayCounter==userFindCharArray.length) break;
+            if (userFindCharArray[userFindArrayCounter]==inputCharArray[i] && i>=atIndex){
+                if (returnindex==-1) returnindex=i;
+                foundfirstoccurance=true;
+                userFindArrayCounter++;
+            }else if(userFindCharArray[userFindArrayCounter]!=inputCharArray[i] && foundfirstoccurance==true){
+                foundfirstoccurance=false;
+                userFindArrayCounter=0;
+                returnindex=-1;
+            }
+        }
+        //if (foundfirstoccurance==false) i=-1;
+        return returnindex;
+    }
 }

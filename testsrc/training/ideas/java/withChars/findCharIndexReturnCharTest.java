@@ -14,7 +14,7 @@ public class findCharIndexReturnCharTest {
         char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
         int expectedOutputIndex = 6;
 
-        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'I'));
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'I',0));
     }
     @Test
     public void findCharTest2(){
@@ -22,7 +22,7 @@ public class findCharIndexReturnCharTest {
         char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
         int expectedOutputIndex = -1;
 
-        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'Q'));
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'Q',0));
     }
     @Test
     public void findCharTest3(){
@@ -30,7 +30,7 @@ public class findCharIndexReturnCharTest {
         char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
         int expectedOutputIndex = 9;
 
-        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'K'));
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'K',0));
     }
     @Test
     public void findCharTest4(){
@@ -38,7 +38,7 @@ public class findCharIndexReturnCharTest {
         char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
         int expectedOutputIndex = 0;
 
-        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'M'));
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'M',0));
     }
     @Test
     public void findCharTest5(){
@@ -46,6 +46,6 @@ public class findCharIndexReturnCharTest {
         char [] myInputCharArray = {'M','A','N','J','A','R','I','N','I','K','I','T','A'};
         int expectedOutputIndex = 1;
 
-        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'A'));
+        Assert.assertEquals(expectedOutputIndex, myFindCharClass.findCharReturnIndexChar(myInputCharArray, 'A',0));
     }
 }
