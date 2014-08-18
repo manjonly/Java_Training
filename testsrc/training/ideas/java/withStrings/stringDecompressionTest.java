@@ -7,6 +7,7 @@ import org.junit.Test;
  * Created by idnmao on 8/11/2014.
  */
 public class stringDecompressionTest {
+
     @Test
     public void deCompressStringAABBBCCCCCCCCCCC(){
         StringDeCompression myStringClass=new StringDeCompression();
