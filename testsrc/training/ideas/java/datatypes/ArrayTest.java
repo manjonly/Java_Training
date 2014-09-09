@@ -56,4 +56,36 @@ public class ArrayTest {
         int [] outputarray = {100,80,77,58,12};
         Assert.assertArrayEquals(outputarray, newarrayclass.interchangearrayvalues(inputarray,pos1,pos2));
     }
+
+    @Test
+    public void returnSubArraygivenEndIndex1(){
+        WorkingwithArrays newarrayclass = new WorkingwithArrays();
+        int [] inputarray = {12,80,77,58,100,83,41,98,65,58,79,99,92};
+        int [] outputarray = {12,80,77,58,100};
+        Assert.assertArrayEquals(outputarray, newarrayclass.returnSubArray(inputarray,0,4));
+    }
+
+    @Test
+    public void returnSubArraygivenEndIndex2(){
+        WorkingwithArrays newarrayclass = new WorkingwithArrays();
+        int [] inputarray = {12,80,77,58,100,83,41,98,65,58,79,99,92};
+        int [] outputarray = {12,80,77,58,100,83,41,98,65,58,79,99,92};
+        Assert.assertArrayEquals(outputarray, newarrayclass.returnSubArray(inputarray,0,12));
+    }
+
+    @Test
+    public void returnSubArraygivenEndIndex3(){
+        WorkingwithArrays newarrayclass = new WorkingwithArrays();
+        int [] inputarray = {12,80,77,58,100,83,41,98,65,58,79,99,92};
+        int [] outputarray = {12,80,77,58,100,83,41,98,65,58,79,99};
+        Assert.assertArrayEquals(outputarray, newarrayclass.returnSubArray(inputarray,0,11));
+    }
+
+    @Test
+    public void returnSubArraygivenStartnEndIndexs1(){
+        WorkingwithArrays newarrayclass = new WorkingwithArrays();
+        int [] inputarray = {12,80,77,58,100,83,41,98,65,58,79,99,92};
+        int [] outputarray = {100,83,41,98};
+        Assert.assertArrayEquals(outputarray, newarrayclass.returnSubArray(inputarray,4,7));
+    }
 }

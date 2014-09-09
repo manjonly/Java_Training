@@ -1,9 +1,11 @@
 package training.ideas.java.decisions;
 
+import java.util.List;
+
 /**
  * Created by idnmao on 7/24/2014.
  */
-public class FPLOS {
+public class FPLOS_OLD {
     public String fplosdate(double ratevalue, double[] lrVfor7days) {
         double sumofratevalue=0;
         double sumofLRV=0;
@@ -18,11 +20,12 @@ public class FPLOS {
     }
 
     public String [] fplosdate(double[] inputRateSpectrum, double[] lrVfor7days) {
-        FPLOS myfplos = new FPLOS();
+        FPLOS_OLD myfplos = new FPLOS_OLD();
         String [] fplosOutput = new String [inputRateSpectrum.length];
         for (int i=0;i<inputRateSpectrum.length;i++){
             fplosOutput[i]=myfplos.fplosdate(inputRateSpectrum[i], lrVfor7days);
         }
         return fplosOutput;
     }
+
 }
